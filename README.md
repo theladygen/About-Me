@@ -11,7 +11,7 @@ I build an app with a direct and powerful purpose. It does all of the things tha
 * [submission PR](http://xyz.com)
 * Any Links you used as reference
 
-### Lighthouse Accessibility Report Score
+### [Lighthouse Accessibility Report Score](img/Screenshot%202023-04-27%20at%2011.09.42%20PM.png)
 
 ### Reflections and Comments
 
