@@ -144,4 +144,4 @@ while (userName === '' || userName === null) {
   userName = prompt ('Don\'t be shy now!');
 }
 // console.log('username is', userName);
-alert('Hello, ' + userName.trim() + ' it\'s been so much fun playing guessing games with you! I hope you enjoy my website!');
+alert('Hello, ' + userName.trim() + '! It\'s been so much fun playing guessing games with you! I hope you enjoy my website!');
