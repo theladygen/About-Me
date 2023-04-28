@@ -2,19 +2,16 @@
 
 let answerCats = '';
 
-while(answerCats.trim().toLowerCase() !== 'yes' && answerCats.trim().toLowerCase() !== 'y' && answerCats.trim().toLowerCase() !== 'no' && answerCats.trim().toLowerCase() !== 'n')
-{
+while (answerCats !== 'yes' && answerCats !== 'y' && answerCats !== 'no' && answerCats !== 'n') {
   answerCats = prompt('Let\'s play Get to Know Genevieve! Here\'s an easy warm up question: Do I like cats: yes or no?');
-  while (answerCats === '' || answerCats === null)
-  {
+  while (answerCats === '' || answerCats === null) {
     answerCats = prompt('Aw, come on! Do I like cats: yes or no?');
   }
 
   answerCats = answerCats.trim().toLowerCase();
   console.log('like cats', answerCats);
 
-  switch (true)
-  {
+  switch (true) {
   case (answerCats === 'yes' || answerCats === 'y'):
   // console.log('Yay! It\'s like you know me already!');
     alert('Yay! It\'s like you know me already!');
@@ -33,19 +30,16 @@ while(answerCats.trim().toLowerCase() !== 'yes' && answerCats.trim().toLowerCase
 
 let answerCook = '';
 
-while(answerCook.trim().toLowerCase() !== 'yes' && answerCook.trim().toLowerCase() !== 'y' && answerCook.trim().toLowerCase() !== 'no' && answerCook.trim().toLowerCase() !== 'n')
-{
+while (answerCook !== 'yes' && answerCook !== 'y' && answerCook !== 'no' && answerCook !== 'n') {
   answerCook = prompt('Am I a good cook: yes or no?');
-  while (answerCook === '' || answerCook === null)
-  {
+  while (answerCook === '' || answerCook === null) {
     answerCook = prompt('Only yes or no answers, if you don\'t mind.');
   }
 
   answerCook = answerCook.trim().toLowerCase();
   console.log('good cook', answerCook);
 
-  switch (true)
-  {
+  switch (true) {
   case (answerCook === 'yes' || answerCook === 'y'):
   // console.log('You have such faith in me, shucks!');
     alert('You have such faith in me, shucks!');
@@ -64,19 +58,16 @@ while(answerCook.trim().toLowerCase() !== 'yes' && answerCook.trim().toLowerCase
 
 let answerSkate = '';
 
-while(answerSkate.trim().toLowerCase() !== 'yes' && answerSkate.trim().toLowerCase() !== 'y' && answerSkate.trim().toLowerCase() !== 'no' && answerSkate.trim().toLowerCase() !== 'n')
-{
+while (answerSkate !== 'yes' && answerSkate !== 'y' && answerSkate !== 'no' && answerSkate !== 'n') {
   answerSkate = prompt('Can I roller skate: yes or no?');
-  while (answerSkate === '' || answerSkate === null)
-  {
+  while (answerSkate === '' || answerSkate === null) {
     answerSkate = prompt('Stick to yes or no answers, please.');
   }
 
   answerSkate = answerSkate.trim().toLowerCase();
   console.log('can skate', answerSkate);
 
-  switch (true)
-  {
+  switch (true) {
   case (answerSkate === 'yes' || answerSkate === 'y'):
   // console.log('I could when I was 12! As an adult it\'s tbd...');
     alert('I could when I was 12! As an adult it\'s tbd...');
@@ -95,19 +86,16 @@ while(answerSkate.trim().toLowerCase() !== 'yes' && answerSkate.trim().toLowerCa
 
 let answerSunburn = '';
 
-while(answerSunburn.trim().toLowerCase() !== 'yes' && answerSunburn.trim().toLowerCase() !== 'y' && answerSunburn.trim().toLowerCase() !== 'no' && answerSunburn.trim().toLowerCase() !== 'n')
-{
+while (answerSunburn !== 'yes' && answerSunburn !== 'y' && answerSunburn !== 'no' && answerSunburn !== 'n') {
   answerSunburn = prompt('Do I sunburn easily: yes or no?');
-  while (answerSunburn === '' || answerSunburn === null)
-  {
+  while (answerSunburn === '' || answerSunburn === null) {
     answerSunburn = prompt('A yes or no will do just fine.');
   }
 
   answerSunburn = answerSunburn.trim().toLowerCase();
   console.log('sunburn easily', answerSunburn);
 
-  switch (true)
-  {
+  switch (true) {
   case (answerSunburn === 'yes' || answerSunburn === 'y'):
   // console.log('Did my million and one moles tip you off?');
     alert('Did my million and one moles tip you off?');
@@ -126,19 +114,16 @@ while(answerSunburn.trim().toLowerCase() !== 'yes' && answerSunburn.trim().toLow
 
 let answerMarbles = '';
 
-while(answerMarbles.trim().toLowerCase() !== 'yes' && answerMarbles.trim().toLowerCase() !== 'y' && answerMarbles.trim().toLowerCase() !== 'no' && answerMarbles.trim().toLowerCase() !== 'n')
-{
+while (answerMarbles !== 'yes' && answerMarbles !== 'y' && answerMarbles !== 'no' && answerMarbles !== 'n') {
   answerMarbles = prompt('For all the marbles: Can I pet a cat while applying sunscreen to go out roller skating and simultaneously remember to take my dinner out of the oven before I leave and it burns: yes or no?!?');
-  while (answerMarbles === '' || answerMarbles === null)
-  {
+  while (answerMarbles === '' || answerMarbles === null) {
     answerMarbles = prompt('This is the big one, folks. Only yes or no will do.');
   }
 
   answerMarbles = answerMarbles.trim().toLowerCase();
   console.log('good cook', answerMarbles);
 
-  switch (true)
-  {
+  switch (true) {
   case (answerMarbles === 'yes' || answerMarbles === 'y'):
   // console.log('That\'s it! You\'re hired as my new inspirational coach!!!');
     alert('That\'s it! You\'re hired as my new inspirational coach!!!');
@@ -155,10 +140,8 @@ while(answerMarbles.trim().toLowerCase() !== 'yes' && answerMarbles.trim().toLow
 }
 
 let userName = prompt ('All this talk about me, but what about you? What\'s your name?');
-while (userName === '' || userName === null)
-{
+while (userName === '' || userName === null) {
   userName = prompt ('Don\'t be shy now!');
 }
-userName = userName.trim().toLowerCase();
-console.log('username is', userName);
-alert('Hello, ' + userName + ' it\'s been so much fun playing guessing games with you! I hope you enjoy my website!');
+// console.log('username is', userName);
+alert('Hello, ' + userName.trim() + ' it\'s been so much fun playing guessing games with you! I hope you enjoy my website!');
