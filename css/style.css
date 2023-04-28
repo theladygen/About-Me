@@ -1,29 +1,42 @@
 body {
+  font-family: 'Quicksand', sans-serif;
   border: solid #4a4e69;
   border-width: 10px;
   background-color: #9a8c98;
+  margin: 0%;
 }
 
 h1 {
   color: #f2e9e4;
   background-color: #22223b;
+  text-align: center;
+  padding: 1em;
 }
 
 section {
   background-color: #c9ada7;
+  text-align: center;
+  border-top: 2px solid #22223b;
 }
 h2 {
   color: #f2e9e4;
   background-color: #22223b;
+  padding: 0.25em;
+  text-align: center;
 }
 
 footer {
   color: #f2e9e4;
   background-color: #22223b;
+  text-align: right;
+  padding: 0.5em;
 }
 
 img {
-  height: 20em;
+  height: 15em;
+  display: block;
+  margin-left: auto;
+  margin-right: auto;
 }
 
 p {
