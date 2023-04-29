@@ -1,5 +1,14 @@
 'use strict';
 
+let userName = prompt ('Hi! What\'s your name?');
+userName = userName.trim();
+while (userName === '' || userName === null) {
+  userName = prompt ('Don\'t be shy now!');
+}
+// console.log('username is', userName);
+alert('Hello, ' + userName + 'I hope you enjoy my website!');
+
+
 let answerCats = '';
 
 while (answerCats !== 'yes' && answerCats !== 'y' && answerCats !== 'no' && answerCats !== 'n') {
@@ -9,7 +18,7 @@ while (answerCats !== 'yes' && answerCats !== 'y' && answerCats !== 'no' && answ
   }
 
   answerCats = answerCats.trim().toLowerCase();
-  console.log('like cats', answerCats);
+  // console.log('like cats', answerCats);
 
   switch (true) {
   case (answerCats === 'yes' || answerCats === 'y'):
@@ -37,7 +46,7 @@ while (answerCook !== 'yes' && answerCook !== 'y' && answerCook !== 'no' && answ
   }
 
   answerCook = answerCook.trim().toLowerCase();
-  console.log('good cook', answerCook);
+  // console.log('good cook', answerCook);
 
   switch (true) {
   case (answerCook === 'yes' || answerCook === 'y'):
@@ -65,7 +74,7 @@ while (answerSkate !== 'yes' && answerSkate !== 'y' && answerSkate !== 'no' && a
   }
 
   answerSkate = answerSkate.trim().toLowerCase();
-  console.log('can skate', answerSkate);
+  // console.log('can skate', answerSkate);
 
   switch (true) {
   case (answerSkate === 'yes' || answerSkate === 'y'):
@@ -93,7 +102,7 @@ while (answerSunburn !== 'yes' && answerSunburn !== 'y' && answerSunburn !== 'no
   }
 
   answerSunburn = answerSunburn.trim().toLowerCase();
-  console.log('sunburn easily', answerSunburn);
+  // console.log('sunburn easily', answerSunburn);
 
   switch (true) {
   case (answerSunburn === 'yes' || answerSunburn === 'y'):
@@ -121,7 +130,7 @@ while (answerMarbles !== 'yes' && answerMarbles !== 'y' && answerMarbles !== 'no
   }
 
   answerMarbles = answerMarbles.trim().toLowerCase();
-  console.log('good cook', answerMarbles);
+  // console.log('good cook', answerMarbles);
 
   switch (true) {
   case (answerMarbles === 'yes' || answerMarbles === 'y'):
@@ -139,9 +148,4 @@ while (answerMarbles !== 'yes' && answerMarbles !== 'y' && answerMarbles !== 'no
   }
 }
 
-let userName = prompt ('All this talk about me, but what about you? What\'s your name?');
-while (userName === '' || userName === null) {
-  userName = prompt ('Don\'t be shy now!');
-}
-// console.log('username is', userName);
-alert('Hello, ' + userName.trim() + '! It\'s been so much fun playing guessing games with you! I hope you enjoy my website!');
+alert('It was so fun playing this game with you today, ' + userName + '! I hope you had a good time!');
