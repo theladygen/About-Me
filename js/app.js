@@ -181,13 +181,13 @@ if(pickNum != number){
   alert('Shoot, you ran out of guesses. The number was 2.');
 }
 
-let catNames = ['fox', 'sophie', 'oliver', 'albus','bug'];
+let catNames = ['Fox', 'Sophie', 'Oliver', 'Albus','Bug'];
 let hasGuessedRight = false;
 for(let i = 0; i < 6; i++){
   let pickCat = prompt('I have 5 cats... can you guess one of their names?').toLowerCase();
   // console.log('pickcat', pickCat);
   for(let j = 0; j < catNames.length; j++){
-    if(catNames[j] === pickCat){
+    if(catNames[j].toLowerCase() === pickCat){
       alert('Nice job!');
       hasGuessedRight = true;
       correctAnswers++;
@@ -206,9 +206,11 @@ if(!hasGuessedRight){
 }
 
 let catNamesString = '';
-for(let i = 0; i < catNames.length; i++){
+for(let i = 0; i < catNames.length - 1; i++){
   catNamesString = catNamesString + catNames[i] + ', ';
 }
+catNamesString = catNamesString + ' and ' + catNames[catNames.length - 1] + '.';
+
 alert('A+ for effort. My cat\'s names are ' + catNamesString);
 
 alert('Congrats! You got ' + correctAnswers + ' correct!');
