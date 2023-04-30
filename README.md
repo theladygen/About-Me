@@ -1,10 +1,10 @@
-# About Me - Lab 2
+# Lab 2
 
-## Project Name
+## About Me
 
-I build an app with a direct and powerful purpose. It does all of the things that it accomplishes well. I should describe the purpose and functionality so those that visit my README understand the app
+This a website with information about Genevieve DuPuy, her background, and her goals for the future. It includes fun guessing game questions to add a light hearted approach.
 
-### Author: Student/Group Name
+### Author: Genevieve DuPuy
 
 ### Links and Resources
 
@@ -13,9 +13,8 @@ I build an app with a direct and powerful purpose. It does all of the things tha
 
 ### Lighthouse Accessibility Report Score
 
-![screenshot of Lighthouse Accessibility Report Score reading 100](img/Screenshot%202023-04-27%20at%2011.09.42%20PM.png "Lighthouse Report")
+![screenshot of Lighthouse Accessibility Report Score reading 100](img/lighthouse-analysis.png"Lighthouse Report")
 
 ### Reflections and Comments
 
-* Consider including the answers to your daily journal and submission questions here
-* This is also a good place to reflect on the tools and resources used and learned
+* It has been fun to see the build of knowledge between HTML, CSS, and JS beginning to click here and there. It is also exciting to begin to understand more and more regarding the tools available via inspecting.

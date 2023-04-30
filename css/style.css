@@ -17,12 +17,15 @@ section {
   background-color: #c9ada7;
   text-align: center;
   border-top: 2px solid #22223b;
+  padding-top: 1em;
+  padding-bottom: 1em;
 }
 h2 {
   color: #f2e9e4;
   background-color: #22223b;
   padding: 0.25em;
   text-align: center;
+  margin-bottom: 1em;
 }
 
 footer {
@@ -30,6 +33,14 @@ footer {
   background-color: #22223b;
   text-align: right;
   padding: 0.5em;
+}
+
+ol {
+  list-style: decimal inside;
+}
+
+ul {
+  list-style: disc inside;
 }
 
 img {
@@ -40,7 +51,7 @@ img {
 }
 
 p {
-  color: #22223b
+  color: #22223b;
 }
 
 

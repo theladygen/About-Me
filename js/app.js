@@ -3,16 +3,16 @@
 let userName = prompt ('Hi! What\'s your name?');
 userName = userName.trim();
 while (userName === '' || userName === null) {
-  userName = prompt ('Don\'t be shy now!');
+  userName = prompt ('Don\'t be shy now.');
 }
 // console.log('username is', userName);
-alert('Hello, ' + userName + 'I hope you enjoy my website!');
-
+alert('Hello, ' + userName + ', I hope you enjoy my website!');
+let correctAnswers = 0;
 
 let answerCats = '';
 
 while (answerCats !== 'yes' && answerCats !== 'y' && answerCats !== 'no' && answerCats !== 'n') {
-  answerCats = prompt('Let\'s play Get to Know Genevieve! Here\'s an easy warm up question: Do I like cats: yes or no?');
+  answerCats = prompt('Let\'s play Get to Know Genevieve. Here\'s an easy warm up question: Do I like cats: yes or no?');
   while (answerCats === '' || answerCats === null) {
     answerCats = prompt('Aw, come on! Do I like cats: yes or no?');
   }
@@ -23,7 +23,8 @@ while (answerCats !== 'yes' && answerCats !== 'y' && answerCats !== 'no' && answ
   switch (true) {
   case (answerCats === 'yes' || answerCats === 'y'):
   // console.log('Yay! It\'s like you know me already!');
-    alert('Yay! It\'s like you know me already!');
+    alert('Yay! It\'s like you know me already.');
+    correctAnswers++;
     break;
   case (answerCats === 'no' || answerCats === 'n'):
   // console.log('Oof! We\'re off to a bad start here.');
@@ -52,6 +53,7 @@ while (answerCook !== 'yes' && answerCook !== 'y' && answerCook !== 'no' && answ
   case (answerCook === 'yes' || answerCook === 'y'):
   // console.log('You have such faith in me, shucks!');
     alert('You have such faith in me, shucks!');
+    correctAnswers++;
     break;
   case (answerCook === 'no' || answerCook === 'n'):
   // console.log('Unfortunately, you\'re not wrong.');
@@ -79,11 +81,12 @@ while (answerSkate !== 'yes' && answerSkate !== 'y' && answerSkate !== 'no' && a
   switch (true) {
   case (answerSkate === 'yes' || answerSkate === 'y'):
   // console.log('I could when I was 12! As an adult it\'s tbd...');
-    alert('I could when I was 12! As an adult it\'s tbd...');
+    alert('I could when I was 12. As an adult it\'s tbd...');
+    correctAnswers++;
     break;
   case (answerSkate === 'no' || answerSkate === 'n'):
   // console.log('We\'ll find out when my new skates arrive!');
-    alert('We\'ll find out when my new skates get here!');
+    alert('We\'ll find out when my new skates get here...');
     break;
   default:
   // console.log('A simple yes or no will suffice, thanks.');
@@ -108,6 +111,7 @@ while (answerSunburn !== 'yes' && answerSunburn !== 'y' && answerSunburn !== 'no
   case (answerSunburn === 'yes' || answerSunburn === 'y'):
   // console.log('Did my million and one moles tip you off?');
     alert('Did my million and one moles tip you off?');
+    correctAnswers++;
     break;
   case (answerSunburn === 'no' || answerSunburn === 'n'):
   // console.log('I don\'t spontaneously combust like a vampire, but it\'s close.');
@@ -136,10 +140,11 @@ while (answerMarbles !== 'yes' && answerMarbles !== 'y' && answerMarbles !== 'no
   case (answerMarbles === 'yes' || answerMarbles === 'y'):
   // console.log('That\'s it! You\'re hired as my new inspirational coach!!!');
     alert('That\'s it! You\'re hired as my new inspirational coach!!!');
+    correctAnswers++;
     break;
   case (answerMarbles === 'no' || answerMarbles === 'n'):
   // console.log('I mean, seriously! WHO could do all o\' that?!');
-    alert('I mean, seriously! WHO could do all o\' that?!');
+    alert('I mean, seriously. WHO could do all o\' that?!');
     break;
   default:
   // console.log('Rules are rules. It\'s either a yes, or it\'s a no. No pressure.');
@@ -148,4 +153,58 @@ while (answerMarbles !== 'yes' && answerMarbles !== 'y' && answerMarbles !== 'no
   }
 }
 
-alert('It was so fun playing this game with you today, ' + userName + '! I hope you had a good time!');
+let number = 2;
+let pickNum;
+for(let i = 0; i < 4; i++) {
+  pickNum = prompt('Pick a number between 1 and 5.');
+  // console.log('pickNum', pickNum);
+  if(pickNum < number){
+    alert('Too low, guess again.');
+  }
+  else if(pickNum > number){
+    alert('Too high, guess again.');
+  }
+  else {
+    alert('You\'re right!');
+    correctAnswers++;
+    break;
+  }
+}
+if(pickNum != number){
+  alert('Shoot, you ran out of guesses. The number was 2.');
+}
+
+let catNames = ['fox', 'sophie', 'oliver', 'albus','bug'];
+let hasGuessedRight = false;
+for(let i = 0; i < 6; i++){
+  let pickCat = prompt('I have 5 cats... can you guess one of their names?').toLowerCase();
+  // console.log('pickcat', pickCat);
+  for(let j = 0; j < catNames.length; j++){
+    if(catNames[j] === pickCat){
+      alert('Nice job!');
+      hasGuessedRight = true;
+      correctAnswers++;
+      break;
+    }
+  }
+  if (hasGuessedRight === true) {
+    break;
+  } else {
+    alert('Nope. Try again!');
+  }
+
+}
+if(!hasGuessedRight){
+  alert('Bummer. Good guesses, though.');
+}
+
+let catNamesString = '';
+for(let i = 0; i < catNames.length; i++){
+  catNamesString = catNamesString + catNames[i] + ', ';
+}
+alert('A+ for effort. My cat\'s names are ' + catNamesString);
+
+alert('Congrats! You got ' + correctAnswers + ' correct!');
+
+alert('It was so fun playing this game with you today, ' + userName + '! I hope you had a good time.');
+
