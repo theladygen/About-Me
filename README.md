@@ -13,7 +13,7 @@ This a website with information about Genevieve DuPuy, her background, and her g
 
 ### Lighthouse Accessibility Report Score
 
-![screenshot of Lighthouse Accessibility Report Score reading 100](img/lighthouse-analysis.png"Lighthouse Report")
+![screenshot of Lighthouse Accessibility Report Score reading 100](/img/lighthouse-analysis.png)
 
 ### Reflections and Comments
 
