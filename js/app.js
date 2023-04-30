@@ -155,10 +155,17 @@ while (answerMarbles !== 'yes' && answerMarbles !== 'y' && answerMarbles !== 'no
 
 let number = 2;
 let pickNum;
+
 for(let i = 0; i < 4; i++) {
   pickNum = prompt('Pick a number between 1 and 5.');
   // console.log('pickNum', pickNum);
-  if(pickNum < number){
+
+  let pickNumInt = parseInt(pickNum);
+
+  if(isNaN(pickNumInt) || pickNumInt === '' || pickNumInt === null){
+    alert('Oopsie! That\'s not a number. Try again.');
+  }
+  else if(pickNum < number){
     alert('Too low, guess again.');
   }
   else if(pickNum > number){
