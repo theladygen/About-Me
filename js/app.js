@@ -6,7 +6,7 @@ while (userName === '' || userName === null) {
   userName = prompt ('Don\'t be shy now.');
 }
 // console.log('username is', userName);
-alert('Hello, ' + userName + ', I hope you enjoy my website!');
+alert('Hello, ' + userName + '! I hope you enjoy my website.');
 let correctAnswers = 0;
 
 let answerCats = '';
@@ -209,7 +209,7 @@ let catNamesString = '';
 for(let i = 0; i < catNames.length - 1; i++){
   catNamesString = catNamesString + catNames[i] + ', ';
 }
-catNamesString = catNamesString + ' and ' + catNames[catNames.length - 1] + '.';
+catNamesString = catNamesString + 'and ' + catNames[catNames.length - 1] + '.';
 
 alert('A+ for effort. My cat\'s names are ' + catNamesString);
 
