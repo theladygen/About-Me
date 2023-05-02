@@ -177,7 +177,7 @@ for(let i = 0; i < 4; i++) {
     break;
   }
 }
-if(pickNum !== number){
+if(pickNum != number){
   alert('Shoot, you ran out of guesses. The number was 2.');
 }
 
