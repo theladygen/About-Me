@@ -154,11 +154,10 @@ while (answerMarbles !== 'yes' && answerMarbles !== 'y' && answerMarbles !== 'no
 }
 
 let number = 2;
-let pickNum;
 let pickNumInt;
 
 for(let i = 0; i < 4; i++) {
-  pickNum = prompt('Pick a number between 1 and 5.');
+  let pickNum = prompt('Pick a number between 1 and 5.');
   // console.log('pickNum', pickNum);
 
   pickNumInt = parseInt(pickNum);
