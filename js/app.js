@@ -13,7 +13,6 @@ function userGreeting(){
 }
 
 
-
 function cats(){
   let answerCats = '';
   while (answerCats !== 'yes' && answerCats !== 'y' && answerCats !== 'no' && answerCats !== 'n') {
@@ -40,6 +39,7 @@ function cats(){
     }
   }
 }
+
 
 function cook(){
   let answerCook = '';
@@ -96,6 +96,7 @@ function skate(){
   }
 }
 
+
 function sunburn(){
   let answerSunburn = '';
   while (answerSunburn !== 'yes' && answerSunburn !== 'y' && answerSunburn !== 'no' && answerSunburn !== 'n') {
@@ -121,7 +122,6 @@ function sunburn(){
       break;
     }
   }
-  
 }
 
 
@@ -178,8 +178,8 @@ function numGame(){
   if(pickNumInt !== number){
     alert('Shoot, you ran out of guesses. The number was 2.');
   }
-  
 }
+
 
 function petNames(){
   let catNames = ['Fox', 'Sophie', 'Oliver', 'Albus','Bug'];
@@ -211,10 +211,14 @@ function petNames(){
   catNamesString = catNamesString + 'and ' + catNames[catNames.length - 1] + '.';
   alert('A+ for effort. My cat\'s names are ' + catNamesString);
 }
+
+
 function fareWell(){
   alert('Congrats! You got ' + correctAnswers + ' correct out of 7!');
   alert('It was so fun playing this game with you today, ' + userName + '! I hope you had a good time.');
 }
+
+
 userGreeting();
 cats();
 cook();
@@ -224,4 +228,3 @@ marbles();
 numGame();
 petNames();
 fareWell();
-
