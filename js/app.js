@@ -148,30 +148,32 @@ function marbles(){
 }
 
 
-
-let number = 2;
-let pickNumInt;
-for(let i = 0; i < 4; i++) {
-  let pickNum = prompt('Pick a number between 1 and 5.');
-  // console.log('pickNum', pickNum);
-  pickNumInt = parseInt(pickNum);
-  if(isNaN(pickNumInt) || pickNumInt === '' || pickNumInt === null){
-    alert('Oopsie! That\'s not a number. Try again.');
+function numGame(){
+  let number = 2;
+  let pickNumInt;
+  for(let i = 0; i < 4; i++) {
+    let pickNum = prompt('Pick a number between 1 and 5.');
+    // console.log('pickNum', pickNum);
+    pickNumInt = parseInt(pickNum);
+    if(isNaN(pickNumInt) || pickNumInt === '' || pickNumInt === null){
+      alert('Oopsie! That\'s not a number. Try again.');
+    }
+    else if(pickNumInt < number){
+      alert('Too low, guess again.');
+    }
+    else if(pickNumInt > number){
+      alert('Too high, guess again.');
+    }
+    else {
+      alert('You\'re right!');
+      correctAnswers++;
+      break;
+    }
   }
-  else if(pickNumInt < number){
-    alert('Too low, guess again.');
+  if(pickNumInt !== number){
+    alert('Shoot, you ran out of guesses. The number was 2.');
   }
-  else if(pickNumInt > number){
-    alert('Too high, guess again.');
-  }
-  else {
-    alert('You\'re right!');
-    correctAnswers++;
-    break;
-  }
-}
-if(pickNumInt !== number){
-  alert('Shoot, you ran out of guesses. The number was 2.');
+  
 }
 
 
