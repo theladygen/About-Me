@@ -8,7 +8,7 @@ This a website with information about Genevieve DuPuy, her background, and her g
 
 ### Author: Genevieve DuPuy
 
-#### In colaboration with: Ariania Palmer as driver
+#### In collaboration with Ariania Palmer as driver
 
 ### Log of Updates
 
