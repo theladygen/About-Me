@@ -91,32 +91,34 @@ function skate(){
   }
 }
 
-
-
-let answerSunburn = '';
-while (answerSunburn !== 'yes' && answerSunburn !== 'y' && answerSunburn !== 'no' && answerSunburn !== 'n') {
-  answerSunburn = prompt('Do I sunburn easily: yes or no?');
-  while (answerSunburn === '' || answerSunburn === null) {
-    answerSunburn = prompt('A yes or no will do just fine.');
+function sunburn(){
+  let answerSunburn = '';
+  while (answerSunburn !== 'yes' && answerSunburn !== 'y' && answerSunburn !== 'no' && answerSunburn !== 'n') {
+    answerSunburn = prompt('Do I sunburn easily: yes or no?');
+    while (answerSunburn === '' || answerSunburn === null) {
+      answerSunburn = prompt('A yes or no will do just fine.');
+    }
+    answerSunburn = answerSunburn.trim().toLowerCase();
+    // console.log('sunburn easily', answerSunburn);
+    switch (true) {
+    case (answerSunburn === 'yes' || answerSunburn === 'y'):
+    // console.log('Did my million and one moles tip you off?');
+      alert('Did my million and one moles tip you off?');
+      correctAnswers++;
+      break;
+    case (answerSunburn === 'no' || answerSunburn === 'n'):
+    // console.log('I don\'t spontaneously combust like a vampire, but it\'s close.');
+      alert('I don\'t spontaneously combust like a vampire, but it\'s close.');
+      break;
+    default:
+    // console.log('Yes or no answers only.');
+      alert('Yes or no answers only.');
+      break;
+    }
   }
-  answerSunburn = answerSunburn.trim().toLowerCase();
-  // console.log('sunburn easily', answerSunburn);
-  switch (true) {
-  case (answerSunburn === 'yes' || answerSunburn === 'y'):
-  // console.log('Did my million and one moles tip you off?');
-    alert('Did my million and one moles tip you off?');
-    correctAnswers++;
-    break;
-  case (answerSunburn === 'no' || answerSunburn === 'n'):
-  // console.log('I don\'t spontaneously combust like a vampire, but it\'s close.');
-    alert('I don\'t spontaneously combust like a vampire, but it\'s close.');
-    break;
-  default:
-  // console.log('Yes or no answers only.');
-    alert('Yes or no answers only.');
-    break;
-  }
+  
 }
+
 
 
 let answerMarbles = '';
