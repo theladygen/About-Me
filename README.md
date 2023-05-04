@@ -7,6 +7,7 @@
 This a website with information about Genevieve DuPuy, her background, and her goals for the future. It includes fun guessing game questions to add a light hearted approach.
 
 ### Author: Genevieve DuPuy
+#### In colaboration with: Ariania Palmer as driver
 
 ### Log of Updates
 
