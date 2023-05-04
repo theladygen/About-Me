@@ -120,31 +120,33 @@ function sunburn(){
 }
 
 
-
-let answerMarbles = '';
-while (answerMarbles !== 'yes' && answerMarbles !== 'y' && answerMarbles !== 'no' && answerMarbles !== 'n') {
-  answerMarbles = prompt('For all the marbles: Can I pet a cat while applying sunscreen to go out roller skating and simultaneously remember to take my dinner out of the oven before I leave and it burns: yes or no?!?');
-  while (answerMarbles === '' || answerMarbles === null) {
-    answerMarbles = prompt('This is the big one, folks. Only yes or no will do.');
-  }
-  answerMarbles = answerMarbles.trim().toLowerCase();
-  // console.log('good cook', answerMarbles);
-  switch (true) {
-  case (answerMarbles === 'yes' || answerMarbles === 'y'):
-  // console.log('That\'s it! You\'re hired as my new inspirational coach!!!');
-    alert('That\'s it! You\'re hired as my new inspirational coach!!!');
-    correctAnswers++;
-    break;
-  case (answerMarbles === 'no' || answerMarbles === 'n'):
-  // console.log('I mean, seriously! WHO could do all o\' that?!');
-    alert('I mean, seriously. WHO could do all o\' that?!');
-    break;
-  default:
-  // console.log('Rules are rules. It\'s either a yes, or it\'s a no. No pressure.');
-    alert('Rules are rules. It\'s either a yes, or it\'s a no. No pressure.');
-    break;
+function marbles(){
+  let answerMarbles = '';
+  while (answerMarbles !== 'yes' && answerMarbles !== 'y' && answerMarbles !== 'no' && answerMarbles !== 'n') {
+    answerMarbles = prompt('For all the marbles: Can I pet a cat while applying sunscreen to go out roller skating and simultaneously remember to take my dinner out of the oven before I leave and it burns: yes or no?!?');
+    while (answerMarbles === '' || answerMarbles === null) {
+      answerMarbles = prompt('This is the big one, folks. Only yes or no will do.');
+    }
+    answerMarbles = answerMarbles.trim().toLowerCase();
+    // console.log('good cook', answerMarbles);
+    switch (true) {
+    case (answerMarbles === 'yes' || answerMarbles === 'y'):
+    // console.log('That\'s it! You\'re hired as my new inspirational coach!!!');
+      alert('That\'s it! You\'re hired as my new inspirational coach!!!');
+      correctAnswers++;
+      break;
+    case (answerMarbles === 'no' || answerMarbles === 'n'):
+    // console.log('I mean, seriously! WHO could do all o\' that?!');
+      alert('I mean, seriously. WHO could do all o\' that?!');
+      break;
+    default:
+    // console.log('Rules are rules. It\'s either a yes, or it\'s a no. No pressure.');
+      alert('Rules are rules. It\'s either a yes, or it\'s a no. No pressure.');
+      break;
+    }
   }
 }
+
 
 
 let number = 2;
