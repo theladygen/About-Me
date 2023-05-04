@@ -64,31 +64,33 @@ function cook(){
 }
 
 
-
-let answerSkate = '';
-while (answerSkate !== 'yes' && answerSkate !== 'y' && answerSkate !== 'no' && answerSkate !== 'n') {
-  answerSkate = prompt('Can I roller skate: yes or no?');
-  while (answerSkate === '' || answerSkate === null) {
-    answerSkate = prompt('Stick to yes or no answers, please.');
-  }
-  answerSkate = answerSkate.trim().toLowerCase();
-  // console.log('can skate', answerSkate);
-  switch (true) {
-  case (answerSkate === 'yes' || answerSkate === 'y'):
-  // console.log('I could when I was 12! As an adult it\'s tbd...');
-    alert('I could when I was 12. As an adult it\'s tbd...');
-    correctAnswers++;
-    break;
-  case (answerSkate === 'no' || answerSkate === 'n'):
-  // console.log('We\'ll find out when my new skates arrive!');
-    alert('We\'ll find out when my new skates get here...');
-    break;
-  default:
-  // console.log('A simple yes or no will suffice, thanks.');
-    alert('A simple yes or no will suffice.');
-    break;
+function skate(){
+  let answerSkate = '';
+  while (answerSkate !== 'yes' && answerSkate !== 'y' && answerSkate !== 'no' && answerSkate !== 'n') {
+    answerSkate = prompt('Can I roller skate: yes or no?');
+    while (answerSkate === '' || answerSkate === null) {
+      answerSkate = prompt('Stick to yes or no answers, please.');
+    }
+    answerSkate = answerSkate.trim().toLowerCase();
+    // console.log('can skate', answerSkate);
+    switch (true) {
+    case (answerSkate === 'yes' || answerSkate === 'y'):
+    // console.log('I could when I was 12! As an adult it\'s tbd...');
+      alert('I could when I was 12. As an adult it\'s tbd...');
+      correctAnswers++;
+      break;
+    case (answerSkate === 'no' || answerSkate === 'n'):
+    // console.log('We\'ll find out when my new skates arrive!');
+      alert('We\'ll find out when my new skates get here...');
+      break;
+    default:
+    // console.log('A simple yes or no will suffice, thanks.');
+      alert('A simple yes or no will suffice.');
+      break;
+    }
   }
 }
+
 
 
 let answerSunburn = '';
