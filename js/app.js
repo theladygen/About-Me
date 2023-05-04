@@ -9,28 +9,30 @@ while (userName === '' || userName === null) {
 alert('Hello, ' + userName + '! I hope you enjoy my website.');
 let correctAnswers = 0;
 
-let answerCats = '';
-while (answerCats !== 'yes' && answerCats !== 'y' && answerCats !== 'no' && answerCats !== 'n') {
-  answerCats = prompt('Let\'s play Get to Know Genevieve. Here\'s an easy warm up question: Do I like cats: yes or no?');
-  while (answerCats === '' || answerCats === null) {
-    answerCats = prompt('Aw, come on! Do I like cats: yes or no?');
-  }
-  answerCats = answerCats.trim().toLowerCase();
-  // console.log('like cats', answerCats);
-  switch (true) {
-  case (answerCats === 'yes' || answerCats === 'y'):
-  // console.log('Yay! It\'s like you know me already!');
-    alert('Yay! It\'s like you know me already.');
-    correctAnswers++;
-    break;
-  case (answerCats === 'no' || answerCats === 'n'):
-  // console.log('Oof! We\'re off to a bad start here.');
-    alert('Oof! We\'re off to a bad start here.');
-    break;
-  default:
-  // console.log('Only yes or no answers, purrlease.');
-    alert('Only yes or no answers, purrlease.');
-    break;
+function cats(){
+  let answerCats = '';
+  while (answerCats !== 'yes' && answerCats !== 'y' && answerCats !== 'no' && answerCats !== 'n') {
+    answerCats = prompt('Let\'s play Get to Know Genevieve. Here\'s an easy warm up question: Do I like cats: yes or no?');
+    while (answerCats === '' || answerCats === null) {
+      answerCats = prompt('Aw, come on! Do I like cats: yes or no?');
+    }
+    answerCats = answerCats.trim().toLowerCase();
+    // console.log('like cats', answerCats);
+    switch (true) {
+    case (answerCats === 'yes' || answerCats === 'y'):
+    // console.log('Yay! It\'s like you know me already!');
+      alert('Yay! It\'s like you know me already.');
+      correctAnswers++;
+      break;
+    case (answerCats === 'no' || answerCats === 'n'):
+    // console.log('Oof! We\'re off to a bad start here.');
+      alert('Oof! We\'re off to a bad start here.');
+      break;
+    default:
+    // console.log('Only yes or no answers, purrlease.');
+      alert('Only yes or no answers, purrlease.');
+      break;
+    }
   }
 }
 
@@ -191,6 +193,8 @@ let catNamesString = '';
 for(let i = 0; i < catNames.length - 1; i++){
   catNamesString = catNamesString + catNames[i] + ', ';
 }
+cats();
+
 catNamesString = catNamesString + 'and ' + catNames[catNames.length - 1] + '.';
 alert('A+ for effort. My cat\'s names are ' + catNamesString);
 
