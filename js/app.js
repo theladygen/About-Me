@@ -36,31 +36,33 @@ function cats(){
   }
 }
 
-
-let answerCook = '';
-while (answerCook !== 'yes' && answerCook !== 'y' && answerCook !== 'no' && answerCook !== 'n') {
-  answerCook = prompt('Am I a good cook: yes or no?');
-  while (answerCook === '' || answerCook === null) {
-    answerCook = prompt('Only yes or no answers, if you don\'t mind.');
-  }
-  answerCook = answerCook.trim().toLowerCase();
-  // console.log('good cook', answerCook);
-  switch (true) {
-  case (answerCook === 'yes' || answerCook === 'y'):
-  // console.log('You have such faith in me, shucks!');
-    alert('You have such faith in me, shucks!');
-    correctAnswers++;
-    break;
-  case (answerCook === 'no' || answerCook === 'n'):
-  // console.log('Unfortunately, you\'re not wrong.');
-    alert('Unfortunately, you\'re not wrong.');
-    break;
-  default:
-  // console.log('Only yes or no answers, friend: Am I a good cook? I can take it.');
-    alert('Only yes or no answers, friend. I can take it.');
-    break;
+function cook(){
+  let answerCook = '';
+  while (answerCook !== 'yes' && answerCook !== 'y' && answerCook !== 'no' && answerCook !== 'n') {
+    answerCook = prompt('Am I a good cook: yes or no?');
+    while (answerCook === '' || answerCook === null) {
+      answerCook = prompt('Only yes or no answers, if you don\'t mind.');
+    }
+    answerCook = answerCook.trim().toLowerCase();
+    // console.log('good cook', answerCook);
+    switch (true) {
+    case (answerCook === 'yes' || answerCook === 'y'):
+    // console.log('You have such faith in me, shucks!');
+      alert('You have such faith in me, shucks!');
+      correctAnswers++;
+      break;
+    case (answerCook === 'no' || answerCook === 'n'):
+    // console.log('Unfortunately, you\'re not wrong.');
+      alert('Unfortunately, you\'re not wrong.');
+      break;
+    default:
+    // console.log('Only yes or no answers, friend: Am I a good cook? I can take it.');
+      alert('Only yes or no answers, friend. I can take it.');
+      break;
+    }
   }
 }
+
 
 
 let answerSkate = '';
