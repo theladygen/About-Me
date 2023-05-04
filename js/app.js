@@ -1,13 +1,18 @@
 'use strict';
-
-let userName = prompt ('Hi! What\'s your name?');
-userName = userName.trim();
-while (userName === '' || userName === null) {
-  userName = prompt ('Don\'t be shy now.');
-}
-// console.log('username is', userName);
-alert('Hello, ' + userName + '! I hope you enjoy my website.');
+let userName = '';
 let correctAnswers = 0;
+
+function userGreeting(){
+  userName = prompt ('Hi! What\'s your name?');
+  userName = userName.trim();
+  while (userName === '' || userName === null) {
+    userName = prompt ('Don\'t be shy now.');
+  }
+  // console.log('username is', userName);
+  alert('Hello, ' + userName + '! I hope you enjoy my website.');
+}
+
+
 
 function cats(){
   let answerCats = '';
@@ -206,11 +211,17 @@ function petNames(){
   catNamesString = catNamesString + 'and ' + catNames[catNames.length - 1] + '.';
   alert('A+ for effort. My cat\'s names are ' + catNamesString);
 }
-
+function fareWell(){
+  alert('Congrats! You got ' + correctAnswers + ' correct out of 7!');
+  alert('It was so fun playing this game with you today, ' + userName + '! I hope you had a good time.');
+}
+userGreeting();
 cats();
+cook();
+skate();
+sunburn();
+marbles();
+numGame();
+petNames();
+fareWell();
 
-
-
-
-alert('Congrats! You got ' + correctAnswers + ' correct out of 7!');
-alert('It was so fun playing this game with you today, ' + userName + '! I hope you had a good time.');
