@@ -2,7 +2,7 @@
 let userName = '';
 let correctAnswers = 0;
 
-function userGreeting(){
+function userGreeting() {
   userName = prompt ('Hi! What\'s your name?');
   userName = userName.trim();
   while (userName === '' || userName === null) {
@@ -51,7 +51,7 @@ let tryAgain = [
   'Rules are rules. It\'s either a yes, or it\'s a no. No pressure.'
 ];
 
-function quiz(questions, onlyYesOrNo, answerYes, answerNo, tryAgain){
+function quiz(questions, onlyYesOrNo, answerYes, answerNo, tryAgain) {
   for(let i = 0; i < questions.length; i++) {
     let answer;
     while (answer !== 'yes' && answer !== 'y' && answer !== 'no' && answer !== 'n') {
@@ -72,39 +72,36 @@ function quiz(questions, onlyYesOrNo, answerYes, answerNo, tryAgain){
   }
 }
 
-function numGame(){
+function numGame() {
   let number = 2;
   let pickNumInt;
   for(let i = 0; i < 4; i++) {
     let pickNum = prompt('Pick a number between 1 and 5.');
     pickNumInt = parseInt(pickNum);
-    if(isNaN(pickNumInt) || pickNumInt === '' || pickNumInt === null){
+    if(isNaN(pickNumInt) || pickNumInt === '' || pickNumInt === null) {
       alert('Oopsie! That\'s not a number. Try again.');
-    }
-    else if(pickNumInt < number){
+    } else if(pickNumInt < number) {
       alert('Too low, guess again.');
-    }
-    else if(pickNumInt > number){
+    } else if(pickNumInt > number) {
       alert('Too high, guess again.');
-    }
-    else {
+    } else {
       alert('You\'re right!');
       correctAnswers++;
       break;
     }
   }
-  if(pickNumInt !== number){
+  if(pickNumInt !== number) {
     alert('Shoot, you ran out of guesses. The number was 2.');
   }
 }
 
-function petNames(){
+function petNames() {
   let catNames = ['Fox', 'Sophie', 'Oliver', 'Albus','Bug'];
   let hasGuessedRight = false;
-  for(let i = 0; i < 6; i++){
+  for(let i = 0; i < 6; i++) {
     let pickCat = prompt('I have 5 cats... can you guess one of their names?').toLowerCase();
-    for(let j = 0; j < catNames.length; j++){
-      if(catNames[j].toLowerCase() === pickCat){
+    for(let j = 0; j < catNames.length; j++) {
+      if(catNames[j].toLowerCase() === pickCat) {
         alert('Nice job!');
         hasGuessedRight = true;
         correctAnswers++;
@@ -117,18 +114,18 @@ function petNames(){
       alert('Nope. Try again!');
     }
   }
-  if(!hasGuessedRight){
+  if(!hasGuessedRight) {
     alert('Bummer. Good guesses, though.');
   }
   let catNamesString = '';
-  for(let i = 0; i < catNames.length - 1; i++){
+  for(let i = 0; i < catNames.length - 1; i++) {
     catNamesString = catNamesString + catNames[i] + ', ';
   }
   catNamesString = catNamesString + 'and ' + catNames[catNames.length - 1];
   alert(`A+ for effort! My cat's names are ${catNamesString}.`);
 }
 
-function fareWell(){
+function fareWell() {
   alert(`Yay! You got ${correctAnswers} out of 7!`);
   alert(`It was so fun playing this game with you today, ${userName}! I hope you had a good time.`);
 }
