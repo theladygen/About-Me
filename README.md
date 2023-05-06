@@ -18,6 +18,7 @@ This a website with information about Genevieve DuPuy, her background, and her g
 * 4/29/23 Added reset css file link to HTML. Added defer to JS script link. Added questions to JS and fixed number prompt to only accept numerical input. Fixed Lighthouse screenshot to display image and punctuation on array.
 * 5/1/23 Added Log updates to Readme and link to deployed site.
 * 5/3/23 Added functions to js in collaboration with Ariania Palmer as driver. Updated README.
+* 5/5/23 Removed console logs, added string interpolation, added arrays and quiz function for initial 5 questions, added borders to photos and enlarged heading fonts, updated README.
 
 ### Lighthouse Accessibility Report Score
 
