@@ -11,126 +11,66 @@ function userGreeting(){
   alert(`Hello, ${userName}! I hope you enjoy my website.`);
 }
 
+let questions = [
+  'Let\'s play Get to Know Genevieve. Here\'s an easy warm up question: Do I like cats: yes or no?',
+  'Am I a good cook: yes or no?',
+  'Can I roller skate: yes or no?',
+  'Do I sunburn easily: yes or no?',
+  'For all the marbles: Can I pet a cat while applying sunscreen to go out roller skating and simultaneously remember to take my dinner out of the oven before I leave and it burns: yes or no?!?'
+];
 
-function cats(){
-  let answerCats = '';
-  while (answerCats !== 'yes' && answerCats !== 'y' && answerCats !== 'no' && answerCats !== 'n') {
-    answerCats = prompt('Let\'s play Get to Know Genevieve. Here\'s an easy warm up question: Do I like cats: yes or no?');
-    while (answerCats === '' || answerCats === null) {
-      answerCats = prompt('Aw, come on! Do I like cats: yes or no?');
-    }
-    answerCats = answerCats.trim().toLowerCase();
-    switch (true) {
-    case (answerCats === 'yes' || answerCats === 'y'):
-      alert('Yay! It\'s like you know me already.');
-      correctAnswers++;
-      break;
-    case (answerCats === 'no' || answerCats === 'n'):
-      alert('Oof! We\'re off to a bad start here.');
-      break;
-    default:
-      alert('Only yes or no answers, purrlease.');
-      break;
-    }
-  }
-}
+let onlyYesOrNo = [
+  'Aw, come on! Do I like cats: yes or no?',
+  'Only yes or no answers, if you don\'t mind.',
+  'Stick to yes or no answers, please.',
+  'A yes or no will do just fine.',
+  'This is a big one, folks. Only yes or no will do.'
+];
 
+let answerYes = [
+  'Yay! It\'s like you know me already.',
+  'You have such faith in me, shucks!',
+  'I could when I was 12. As an adult it\'s tbd...',
+  'Did my million and one freckles tip you off?',
+  'That\'s it! You\'re hired as my new inspirational coach!!!'
+];
 
-function cook(){
-  let answerCook = '';
-  while (answerCook !== 'yes' && answerCook !== 'y' && answerCook !== 'no' && answerCook !== 'n') {
-    answerCook = prompt('Am I a good cook: yes or no?');
-    while (answerCook === '' || answerCook === null) {
-      answerCook = prompt('Only yes or no answers, if you don\'t mind.');
-    }
-    answerCook = answerCook.trim().toLowerCase();
-    switch (true) {
-    case (answerCook === 'yes' || answerCook === 'y'):
-      alert('You have such faith in me, shucks!');
-      correctAnswers++;
-      break;
-    case (answerCook === 'no' || answerCook === 'n'):
-      alert('Unfortunately, you\'re not wrong.');
-      break;
-    default:
-      alert('Only yes or no answers, friend. I can take it.');
-      break;
-    }
-  }
-}
+let answerNo = [
+  'Oof! We\'re off to a bad start here.',
+  'Unfortunately, you\'re not wrong.',
+  'We\'ll find out when my new skates get here...',
+  'I don\'t spontaneously combust like a vampire, but it\'s close.',
+  'I mean, seriously. WHO could do all o\' that?!'
+];
 
+let tryAgain = [
+  'Only yes or no answers, purrlease.',
+  'Only yes or no answers, friend. I can take it.',
+  'A simple yes or no will suffice.',
+  'Yes or no answers only.',
+  'Rules are rules. It\'s either a yes, or it\'s a no. No pressure.'
+];
 
-function skate(){
-  let answerSkate = '';
-  while (answerSkate !== 'yes' && answerSkate !== 'y' && answerSkate !== 'no' && answerSkate !== 'n') {
-    answerSkate = prompt('Can I roller skate: yes or no?');
-    while (answerSkate === '' || answerSkate === null) {
-      answerSkate = prompt('Stick to yes or no answers, please.');
-    }
-    answerSkate = answerSkate.trim().toLowerCase();
-    switch (true) {
-    case (answerSkate === 'yes' || answerSkate === 'y'):
-      alert('I could when I was 12. As an adult it\'s tbd...');
-      correctAnswers++;
-      break;
-    case (answerSkate === 'no' || answerSkate === 'n'):
-      alert('We\'ll find out when my new skates get here...');
-      break;
-    default:
-      alert('A simple yes or no will suffice.');
-      break;
+function quiz(questions, onlyYesOrNo, answerYes, answerNo, tryAgain){
+  for(let i = 0; i < questions.length; i++) {
+    let answer;
+    while (answer !== 'yes' && answer !== 'y' && answer !== 'no' && answer !== 'n') {
+      answer = prompt(questions[i]);
+      while (answer === '' || answer === null) {
+        answer = prompt(onlyYesOrNo[i]);
+      }
+      answer = answer.trim().toLowerCase();
+      if (answer === 'yes' || answer === 'y') {
+        alert(answerYes[i]);
+        correctAnswers++;
+      } else if (answer === 'no' || answer === 'n') {
+        alert(answerNo[i]);
+      } else {
+        alert(tryAgain[i]);
+      }
     }
   }
 }
-
-
-function sunburn(){
-  let answerSunburn = '';
-  while (answerSunburn !== 'yes' && answerSunburn !== 'y' && answerSunburn !== 'no' && answerSunburn !== 'n') {
-    answerSunburn = prompt('Do I sunburn easily: yes or no?');
-    while (answerSunburn === '' || answerSunburn === null) {
-      answerSunburn = prompt('A yes or no will do just fine.');
-    }
-    answerSunburn = answerSunburn.trim().toLowerCase();
-    switch (true) {
-    case (answerSunburn === 'yes' || answerSunburn === 'y'):
-      alert('Did my million and one moles tip you off?');
-      correctAnswers++;
-      break;
-    case (answerSunburn === 'no' || answerSunburn === 'n'):
-      alert('I don\'t spontaneously combust like a vampire, but it\'s close.');
-      break;
-    default:
-      alert('Yes or no answers only.');
-      break;
-    }
-  }
-}
-
-
-function marbles(){
-  let answerMarbles = '';
-  while (answerMarbles !== 'yes' && answerMarbles !== 'y' && answerMarbles !== 'no' && answerMarbles !== 'n') {
-    answerMarbles = prompt('For all the marbles: Can I pet a cat while applying sunscreen to go out roller skating and simultaneously remember to take my dinner out of the oven before I leave and it burns: yes or no?!?');
-    while (answerMarbles === '' || answerMarbles === null) {
-      answerMarbles = prompt('This is the big one, folks. Only yes or no will do.');
-    }
-    answerMarbles = answerMarbles.trim().toLowerCase();
-    switch (true) {
-    case (answerMarbles === 'yes' || answerMarbles === 'y'):
-      alert('That\'s it! You\'re hired as my new inspirational coach!!!');
-      correctAnswers++;
-      break;
-    case (answerMarbles === 'no' || answerMarbles === 'n'):
-      alert('I mean, seriously. WHO could do all o\' that?!');
-      break;
-    default:
-      alert('Rules are rules. It\'s either a yes, or it\'s a no. No pressure.');
-      break;
-    }
-  }
-}
-
 
 function numGame(){
   let number = 2;
@@ -157,7 +97,6 @@ function numGame(){
     alert('Shoot, you ran out of guesses. The number was 2.');
   }
 }
-
 
 function petNames(){
   let catNames = ['Fox', 'Sophie', 'Oliver', 'Albus','Bug'];
@@ -189,19 +128,13 @@ function petNames(){
   alert(`A+ for effort! My cat's names are ${catNamesString}.`);
 }
 
-
 function fareWell(){
   alert(`Yay! You got ${correctAnswers} out of 7!`);
   alert(`It was so fun playing this game with you today, ${userName}! I hope you had a good time.`);
 }
 
-
 userGreeting();
-cats();
-cook();
-skate();
-sunburn();
-marbles();
+quiz(questions,onlyYesOrNo,answerYes,answerNo,tryAgain);
 numGame();
 petNames();
 fareWell();
